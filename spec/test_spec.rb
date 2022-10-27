@@ -48,3 +48,30 @@ describe "Array#two_sum" do
     expect(arr3.two_sum).to eq([[0,1],[2,4],[3,5]])
   end
 end
+
+describe "#my_transpose" do
+
+  subject(:arr){[
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8]
+  ]}
+
+  it "returns a square matrix of identical size" do
+    expect(my_transpose(arr).length).to eq(3)
+  end
+
+  it "returns nil if no argument is given" do
+    expect(my_transpose).to eq(nil)
+  end
+
+  it "tranposes the argument" do
+    expect(my_transpose(arr)).to eq([
+      [0, 3, 6],
+      [1, 4, 7],
+      [2, 5, 8]
+      ])
+  end
+
+
+end

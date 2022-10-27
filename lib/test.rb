@@ -23,3 +23,19 @@ class Array
     pairs
   end
 end
+
+def my_transpose(arr=nil)
+  return nil if arr.nil?
+
+  length = arr.length
+
+  output = Array.new(length) {Array.new(length,nil)}
+
+  (0...length).each do |idx|
+    (0...length).each do |jdx|
+      output[jdx][idx] = arr[idx][jdx]
+    end
+  end
+  output
+
+end

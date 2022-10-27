@@ -8,3 +8,18 @@ def my_uniq(arr=[])
   end
   hash.keys
 end
+
+
+class Array
+  def two_sum
+    pairs = []
+    self.each.with_index do |num, i|
+      self.each.with_index do |num2, j|
+        if j > i && num + num2 == 0
+          pairs << [i,j]
+        end
+      end
+    end
+    pairs
+  end
+end

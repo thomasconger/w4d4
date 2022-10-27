@@ -39,3 +39,19 @@ def my_transpose(arr=nil)
   output
 
 end
+
+def stock_picker(arr)
+  output = []
+  (0...arr.length).each do |i|
+    (0...arr.length).each do |j|
+      output << [i, j] if j > i
+    end
+  end
+  output.inject do |acc, ele|
+    if (ele[1] - ele[0]) > (acc[1] - acc[0])
+      ele
+    else
+      acc
+    end
+  end
+end

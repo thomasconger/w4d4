@@ -75,3 +75,38 @@ describe "#my_transpose" do
 
 
 end
+
+describe "#stock_picker" do
+  #arr of prices of stocks
+  subject(:p1) {[1,2,3,4,5]}
+  subject(:p2) {(0..100).to_a.sample(5)}
+  #ordered pair, order uniq
+  #return indices, to indicate day
+  #buy on first day and sell on last day
+  #iterate through arr and making a set of ranges
+  #five elements, four days where we can sell if we buy on
+  #day 1
+  it "should buy on first day and sell on last day for simple case" do
+    expect(stock_picker(p1)).to eq([0,4])
+  end
+
+  it "should never buy on the last day" do
+    expect(stock_picker(p2).first).not_to eq((p2).last)
+  end
+
+  it "should never sell before buying" do
+    expect((stock_picker(p1))[0] < stock_picker(p1)[-1]).to eq(true)
+  end
+
+end
+
+describe "#towers_or_honoi" do
+  # In a loop, prompt the user (using gets) and ask what pile to select a disc from and where to put it.
+
+  #   After each move, check to see if they have succeeded in moving all the discs to the final pile. If so, they win!
+
+  # Note: don't worry about testing the UI. Testing console I/O is tricky (don't bother checking gets or puts). Focus on:
+
+  
+
+end

@@ -107,6 +107,20 @@ describe "#towers_or_honoi" do
 
   # Note: don't worry about testing the UI. Testing console I/O is tricky (don't bother checking gets or puts). Focus on:
 
-  
+  subject(:tower) {Towers_of_Hanoi.new}
+
+  it "should start with three elements" do
+    expect(tower.stack).to eq([3])
+    expect(tower.two).to eq([2])
+    expect(tower.three).to eq([1])
+  end
+
+  it "shouldn't let you put a bigger disc on a smaller disc" do
+    #
+  end
+
+
+
+
 
 end

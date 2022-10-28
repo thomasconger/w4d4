@@ -55,3 +55,23 @@ def stock_picker(arr)
     end
   end
 end
+
+class Towers_of_Hanoi
+
+  attr_reader :one, :two, :three
+
+  def initialize
+    @stack = [
+      [3],
+      [2],
+      [1]
+    ]
+
+  end
+
+  def input
+
+  end
+
+
+end
